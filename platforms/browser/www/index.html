@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QPI Calculator</title>
+
+    <script src="lib/onsen/js/onsenui.js"></script>
+
+    <script src="./lib/redux.min.js"></script>
+    <script src="./main.js"></script>
+
+    
+    <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+      ons-row {
+        background: #08545B;
+      }
+
+      input[type="button"]{
+        background-color: #83CAD0;
+        display: flex;
+        border-radius: 5px;
+        flex: 1 1 calc(25% - 4px);
+        align-items: center;
+        justify-content:center;
+        font-size: 20px;
+        margin: 1.5px;
+        opacity: 0.7;
+      }
+
+      input[type="text"]{
+        background-color: black;
+        width:100%;
+        color: white;
+        font-size: 20px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        flex: 1;      
+      }
+
+      input[type="qpi"]{
+        background-color: black;
+        width: 100%;
+        font-size: 25px;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+    </style>
+
+</head>
+<body>
+  <ons-page>
+    <ons-row style="height: 10%">
+      <td><input type="hidden" id="result"/></td>
+      <td><input type="text" id="fresult"/></td>
+    </ons-row>
+    <ons-row style="height: 15%">
+      <td><input type="qpi" id="result1"/></td>
+    </ons-row>
+    <ons-row style="height: 25%">
+      <td><input type="button" value="A" onclick="put('A')"></td>
+      <td><input type="button" value="B+" onclick="put('B+')"></td>
+      <td><input type="button" value="B" onclick="put('B')"></td>
+    </ons-row>
+    <ons-row style="height:25%">
+      <td><input type="button" value="C+" onclick="put('C+')"></td>
+      <td><input type="button" value="C" onclick="put('C')"></td>
+      <td><input type="button" value="D" onclick="put('D')"></td>
+    </ons-row>
+    <ons-row style="height: 25%">
+      <td><input type="button" value="F/FD" onclick="put('F/FD')"></td>
+      <td><input type="button" value="=" onclick="ans()"></td>
+      <td><input type="button" value="AC" onclick="ers()"></td>
+    </ons-row>
+  </ons-page>
+</body>
+</html>
