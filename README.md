@@ -1,10 +1,4 @@
-# A Blank PhoneGap App
-
-## Usage
-
-### PhoneGap CLI
-
-    $ phonegap create my-app --template blank
+# A QPI Calculator App using Onsen UI
 
 ### Desktop
 
